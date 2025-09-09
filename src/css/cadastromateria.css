@@ -20,33 +20,28 @@
     margin-top: -2vh;
 }
 
-.materia{
-    width: 80vh;
-}
-
-.upload-section-materia,
-.manual-section-materia {
+.upload-section-materia {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    
+    margin: auto;
+    margin-top: 5vh;
+    margin-left: -3vh;
 }
 
-.manual-section-materia input{
-    width: 80vh;
-    /* margin-top: -1vh; */
+.materia{
+    width: 109vh;
+}
+
+.materia-prima2{
+    width: 21vh;
 }
 
 .manual-section-materia h2{
-    margin-left: 5px;
-    margin-top: -5vh;
+    margin-left: 10vh;
+    margin-top: -50vh;
     margin-bottom: -5px ;
-}
-
-.row-materia {
-    display: flex;
-    gap: 10px;
-    width: 90vh;
+    /* margin: auto; */
 }
 
 .input-small {
@@ -63,10 +58,12 @@
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-    width: 83vh;
+    align-items: center;
+    width: 112vh;
     transition: 0.2s;
     display: flex;
     margin-top: 10px;
+    padding-left: 40%;
 }
 
 .upload-btn-materia:hover,
@@ -83,10 +80,19 @@
     cursor: pointer;
     font-size: 16px;
     text-align: center;
-    width: 83vh;
+    align-items: center;
+    padding-left: 40%;
+    width: 113vh;
     transition: 0.2s;
     display: flex;
     margin-top: 10px;
+    margin-left: -10vh;
+}
+
+.manual-section-materia{
+    margin: auto;
+    margin-top: 50vh;
+    margin-left: -10vh;
 }
 
 .info-side-materia {
@@ -105,4 +111,62 @@
 .upload-img {
     width: 180px;
     margin-top: 20px;
+}
+
+.row-materia{
+    display: flex;
+    gap: 15px;
+    margin-left: 10vh;
+}
+
+.row2-materia{
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    margin-left: 10vh;
+}
+
+.materia-prima2 input{
+    flex: 1; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    width: 27vh;
+}
+
+.salvar-materia{
+    margin-left: 10vh;
+}
+
+.salvar input{
+    margin-left: 10vh;
+}
+
+.salvar label{
+    margin-left: 10vh;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 25px;
+    font-weight: medium;
+}
+
+input, select {
+    width: 40vh;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+.upload-img img{
+    width: 10px;
+    height: 30px;
+    z-index: 2;
 }

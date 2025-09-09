@@ -1,8 +1,14 @@
-import {
-    useState
-}
+// import {
+//     useState
+// }
 
-    from "react";
+// import grafico from "../img/materia.svg"; 
+
+//     from "react";
+
+import React, { useState } from "react";
+import materia from "../img/materia.svg";
+
 
 const CadastroMateriaPrima = () => {
     const [file, setFile] = useState(null);
@@ -37,10 +43,13 @@ const CadastroMateriaPrima = () => {
         <div className="form-side-materia" >
 
             { /* Upload XML */}
-            <div className="upload-section-materia" > <h2>Upload de Nota Fiscal</h2>
+            <div className="upload-section-materia">
+                <h2>Upload de Nota Fiscal</h2>
                 <p> Faça upload do XML da nota fiscal para extrair automaticamente as matérias-primas. </p>
                 <form onSubmit={handleUpload}> <input type="file" accept=".xml" onChange={handleFileChange} className="materia" />
-                    <button type="submit" className="upload-btn-materia" > Fazer Upload </button> </form> </div>
+                    <button type="submit" className="upload-btn-materia" > Fazer Upload </button> 
+                </form>
+            </div>
 
             {/* Cadastro manual */}
 
@@ -91,8 +100,8 @@ const CadastroMateriaPrima = () => {
                                     className="quantidade"
                                 />
                             </div> */}
-                            <div className="manual-section-materia" > <h2>Cadastro Manual</h2>
-
+            <div className="manual-section-materia" >
+                <h2>Cadastro Manual</h2>
                 <form onSubmit={handleSubmit}>
 
                     {/* <label htmlFor="nome">Nome do Produto:</label>
@@ -107,16 +116,16 @@ const CadastroMateriaPrima = () => {
                     <label htmlFor="usuario">Usuário Responsável:</label>
                     <input type="text" id="usuario" placeholder="00000" className="usuario" /> */}
 
-                            {/* <div>
+                    {/* <div>
                                 <label>Matéria-Prima:</label>
                                 <input
                                     type="text"
                                     placeholder="Ex: Cobre"
                                     className="materia-prima"
                                 />
-                            </div> */}
+                            </div>
 
-                            {/* <div>
+                            <div>
                                 <label>Unidade:</label>
                                 <select className="unidade-medida">
                                     <option>Selecione</option>
@@ -126,9 +135,9 @@ const CadastroMateriaPrima = () => {
                                     <option>Unidade</option>
                                     <option>Centímetros</option>
                                 </select>
-                            </div> */}
+                            </div>
 
-                            {/* <div>
+                            <div>
                                 <label>Quantidade:</label>
                                 <input
                                     type="text"
@@ -137,36 +146,77 @@ const CadastroMateriaPrima = () => {
                                 />
                             </div> */}
 
-                            <label htmlFor="nome">Matéria Prima</label>
-                    <div className="row-materia" > <input type="text" placeholder="Ex: Cobre" className="input-small" />
+                    <div className="row-materia">
+                        <div>
+                            <label>Matéria-Prima:</label>
+                            <input type="text" placeholder="Ex: Cobre" className="materia-prima" />
+                        </div>
 
-                        
+                        <div>
+                            <label>Unidade:</label>
+                            <select className="unidade-medida">
+                                <option>Selecione</option>
+                                <option>Kg</option>
+                                <option>Litros</option>
+                                <option>Metros</option>
+                                <option>Unidade</option>
+                                <option>Centímetros</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label>Quantidade:</label>
+                            <input type="text" placeholder="Ex: x5" className="quantidade" />
+                        </div>
+
+                        {/* <button type="button" className="add-btn">
+                            +
+                        </button> */}
+                    </div>
+
+                    <div className="row2-materia">
+                        <div>
+                            <label>Preço</label>
+                            <input type="text" placeholder=" Ex: R$50,00" className="materia-prima" />
+                        </div>
+
+                        <div>
+                            <label>Nome do Fornecedor</label>
+                            <input type="text" placeholder="Insira o nome do fornecedor" className="materia-prima" />
+                        </div>
+
+                        <div>
+                            <label>Data de Emissão</label>
+                            <input type="date" className="materia-prima2"/>
+                        </div>
+                    </div>
+                    {/* <label htmlFor="nome">Matéria Prima</label>
+                    <div className="row-materia" > <input type="text" placeholder="Ex: Cobre" className="input-small" />
+    
                         <select className="input-small" >
                             <option>Selecione</option> <option>Kg</option> <option>g</option> <option>Unidade</option> </select>
 
                         
                         <input type="text" placeholder="Ex: x5" className="input-small" />
-                    </div>
+                    </div> */}
 
-                    <label htmlFor="nome">Preço</label>
-                    <input type="text" placeholder="Ex: R$50,00" />
+                    {/* <label htmlFor="nome">Preço</label>
+                    <input type="text" placeholder="Ex: R$50,00" /> */}
 
-                    <label htmlFor="nome">Nome do Fornecedor</label>
-                    <input type="text" placeholder="Insira o nome do fornecedor" />
-
-                    <label htmlFor="nome">Data de Emissão</label>
-                    <input type="date" />
-
+                    <div className="salvar">
                     <label htmlFor="nome">Valor Total</label>
                     <input type="text" placeholder="Insira o valor total considerando o preço unitário e a quantidade" />
-                            <button type="submit" className="salvar-materia" > Salvar </button>
-                        </form>
+                    <button type="submit" className="salvar-materia" > Salvar </button>
+                    </div>
+                </form>
             </div>
         </div>
 
         {/* Lado direito */}
-        <div className="info-side-materia" > <p> Faça upload do arquivo xml ou preencha os campos para cadastrar as matérias-primas manualmente.</p>
-            <img src="/img/upload-icon.png" alt="Upload ilustration" className="upload-img" /> </div>
+        <div className="info-side-materia">
+            <p> Faça upload do arquivo xml ou preencha os campos para cadastrar as matérias-primas manualmente.</p>
+            <img src={materia} alt="Evolução de Custos" className="materia-img" />
+        </div>
     </div>);
 };
 

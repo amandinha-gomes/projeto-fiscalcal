@@ -184,7 +184,7 @@ const Dashboard = () => {
     const [itemSelecionado, setItemSelecionado] = useState(null);
     const [itemTipo, setItemTipo] = useState(null); // 'produto' ou 'materia'
 
-    // Exemplo de produtos (cada item tem id único)
+    // produtos (cada item tem id único)
     const produtos = [
         {
             // id: "1",
@@ -250,7 +250,7 @@ const Dashboard = () => {
 
     return (
         <div className="dashboard-wrapper">
-            <main className="main-content">
+            <main className="main-contentdash">
                 <header className="main-header">
                     <h1>Bem-vindo ao <span className="logo">FiscalCalc</span></h1>
                     <p>Dashboard de Custos e Estoque</p>

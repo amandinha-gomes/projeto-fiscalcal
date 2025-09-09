@@ -12,9 +12,9 @@ function Menu({ children }) {
 
     return (
         <div className="wrapper">
-            {/* <button id="menu-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>
+            <button id="menu-btn" onClick={() => setSidebarOpen(!sidebarOpen)}>
                 {sidebarOpen ? "Fechar Menu" : "Abrir Menu"}
-            </button> */}
+            </button>
 
             {/* <aside className={`sidebar ${sidebarOpen ? "" : "closed"}`}>
                 <ul className="menu">
